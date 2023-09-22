@@ -10,7 +10,9 @@ interface PreviewerProps {
 
 function Previewer(props: PreviewerProps){
   // Utilizziamo dangerouslySetInnerHTML per inserire l'HTML generato dal Markdown
-
+  marked.setOptions({
+    breaks: true,
+  });
   
   const convertMarkdownToHTML = (markdown: string) => {
  
